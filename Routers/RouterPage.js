@@ -3,6 +3,11 @@ import { MentorSchema , StudentSchema } from '../Helpers/MongooseSchema.js';
 
 const router = express.Router();
 
+//Welcome page
+router.get("/",async(req,res)=>{
+    res.status(200).json({message:"Assign Mentor Task"})
+})
+
 //Unassigned students list
 router.get('/unassignedStudents',async(req,res)=>{
     try {
